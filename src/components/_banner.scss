@@ -1,0 +1,56 @@
+@use "../css/abstracts/mixins" as mix;
+@use "../css/abstracts/variables" as var;
+@use "sass:math";
+
+.header {
+  position: relative;
+  margin-top: 0;
+  height: 100vh;
+  background-size: cover;
+  background-image: url("https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68");
+
+}
+
+.banner-text {
+  height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+ padding-left: 150px;
+
+
+
+  @include mix.tablet-styles {
+    padding-left: 50px;
+  }
+
+  @include mix.mobile-l-styles {
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  color: white;
+}
+
+.readmore {
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+
+  @include mix.mobile-l-styles {
+    width: 100%;
+  }
+}
+
+.subtitle {
+  color: white;
+}
+
+.headerimg {
+  width: 100%;
+  height: 100%;
+}

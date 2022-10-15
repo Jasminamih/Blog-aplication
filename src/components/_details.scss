@@ -1,0 +1,34 @@
+@use "../css/abstracts/mixins" as mix;
+@use "../css/abstracts/variables" as var;
+@use "sass:math";
+
+.section {
+    @extend %wrap;
+    @extend %section;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mix.mobile-l-styles {
+
+        flex-direction: column;
+            }
+}
+
+.about {
+    color: var.$text-color-secondary;
+    text-transform: uppercase;
+}
+
+.circle-img{
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    margin-left: 40px;
+
+
+    @include mix.mobile-l-styles {
+
+      margin-left: 0;
+            }
+}
